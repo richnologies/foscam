@@ -160,6 +160,73 @@ var Foscam = (function() {
             }
         });
     };
+    Foscam.prototype.getPTZPresetPointList = function() {
+        var self = this;
+        return new Promise(function(resolve, reject) {
+            self
+                ._sendOrder({
+                    cmd: 'getPTZPresetPointList'
+                })
+                .then(function(results) {
+                    if (parseInt(results.result[0]) === 0) {
+                        resolve(results);
+                    } else {
+                        reject(results);
+                    }
+                });
+        });
+    };
+    Foscam.prototype.ptzAddPresetPoint = function(name) {
+        var self = this;
+        return new Promise(function(resolve, reject) {
+            self
+                ._sendOrder({
+                    cmd: 'ptzAddPresetPoint',
+                    name: name
+                })
+                .then(function(results) {
+                    if (parseInt(results.result[0]) === 0) {
+                        resolve(results);
+                    } else {
+                        reject(results);
+                    }
+                });
+        });
+    };
+    Foscam.prototype.ptzDeletePresetPoint = function(name) {
+        var self = this;
+        return new Promise(function(resolve, reject) {
+            self
+                ._sendOrder({
+                    cmd: 'ptzDeletePresetPoint',
+                    name: name
+                })
+                .then(function(results) {
+                    if (parseInt(results.result[0]) === 0) {
+                        resolve(results);
+                    } else {
+                        reject(results);
+                    }
+                });
+        });
+    };
+    Foscam.prototype.ptzGotoPresetPoint = function(name) {
+        var self = this;
+        return new Promise(function(resolve, reject) {
+            self
+                ._sendOrder({
+                    cmd: 'ptzGotoPresetPoint',
+                    name: name
+                })
+                .then(function(results) {
+                    if (parseInt(results.result[0]) === 0) {
+                        resolve(results);
+                    } else {
+                        reject(results);
+                    }
+                });
+        });
+    };
     Foscam.prototype._sendOrder = function(params) {
         var self = this;
         return new Promise(function(resolve, reject) {
