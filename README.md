@@ -20,8 +20,7 @@ myCamera.ptzMoveRight(4000);
 
 ## Methods
 
-### constructor
-#### ( properties )
+### constructor ( properties )
 
 In order to connect to the camera you first need to provide its access details. This will create an object for that particular camera. You can create as much objects as you need, so you can control multiple cameras. 
 
