@@ -44,7 +44,7 @@ var myCamera = new Foscam({
   host: 'your-camera-ip',
   port: 80,
   usr: 'your-user',
-  pwd: 'your-password
+  pwd: 'your-password'
 });
 
 ```
