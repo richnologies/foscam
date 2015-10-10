@@ -3,7 +3,26 @@
 Implementation in Javascript of the Foscam IPCamera CGI Proxy API.
 The aim is to be able to control the camera from NodeJS. 
 
+## Installation
+
+This is a private module and is store in a private npm repository. You can clone this repository in order to access de module or you could use our repository. In order to do that you need to change the registry for you npm system:
+
+```bash
+npm set registry http://npm.richnologies.me
+```
+
+This registry is a private sinopia server. You don't need to worry about using the rest of public modules in the public npm registry because sinopia is just a proxy. If it is no able to find some module is its own registry it will look for them in the public main registry.
+
+Once you have set the registry, you could install the module as usual. Take care about the name, which is not canonical because there were some other foscam module. 
+
+```bash
+npm install rich-foscam --save
+```
+
 ## Usage
+
+The module is just a class. This has represents one camera. So you could instantiate as many object cameras as you need to control. The methods API is heavily based on Promises. Bellow you can find extra information for each method. 
+
 
 ```js
 var myCamera = new Foscam({
@@ -18,10 +37,6 @@ myCamera
   .then(function(){
     //DO SOMETHING AFTER THE CAMERA HAS MOVED FOR 4 SECONDS
   });
-
-
-
-
 ```
 
 ## Methods
@@ -191,6 +206,39 @@ myCamera
   .then(function() {
     //WARNING! AT THIS POINT THE CAMERA IS NOT AT THE PRESET POINT
     //ITS JUST MOVING TOWARD IT
+  });
+
+```
+
+### ptzStartCruise ( mapName )
+
+The camera moves throw the points the selected cruise
+
+name     | type   | default       | description
+---------|--------|---------------|-------------------------
+mapName  | string |               | The name of the cruise
+
+
+```js
+
+myCamera
+  .ptzStartCruise('MyCruiseName')
+  .then(function() {
+    //WARNING! AT THIS POINT THE CAMERA IS MOVING THROW THE CRUISE
+  });
+
+```
+
+### ptzStopCruise ( )
+
+The camera stops moving
+
+```js
+
+myCamera
+  .ptzStopCruise()
+  .then(function() {
+    //AT THIS POINT THE CAMARA IS STOPED
   });
 
 ```
