@@ -1,6 +1,6 @@
 {
-  "name": "foscam",
-  "version": "0.1.0",
+  "name": "rich-foscam",
+  "version": "0.2.0",
   "description": "Foscam cgi-bin API implementation in JS",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/richnologies/foscam.git"
+    "url": "git+https://richnologies@bitbucket.org/innovategal/foscam.git"
   },
   "keywords": [
     "foscam",
@@ -17,11 +17,10 @@
   ],
   "author": "Ricardo Sanchez Gregorio <hi@richnologies.me>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/richnologies/foscam/issues"
-  },
-  "homepage": "https://github.com/richnologies/foscam#readme",
   "dependencies": {
     "xml2js": "^0.4.9"
+  },
+  "publishConfig": {
+    "registry": "http://npm.richnologies.me/"
   }
 }
