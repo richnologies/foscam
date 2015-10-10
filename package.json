@@ -1,6 +1,6 @@
 {
   "name": "rich-foscam",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Foscam cgi-bin API implementation in JS",
   "main": "index.js",
   "scripts": {
