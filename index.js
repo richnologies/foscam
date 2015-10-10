@@ -227,6 +227,39 @@ var Foscam = (function() {
                 });
         });
     };
+    Foscam.prototype.ptzStartCruise = function(mapName) {
+        var self = this;
+        return new Promise(function(resolve, reject) {
+            self
+                ._sendOrder({
+                    cmd: 'ptzStartCruise',
+                    mapName: mapName
+                })
+                .then(function(results) {
+                    if (parseInt(results.result[0]) === 0) {
+                        resolve(results);
+                    } else {
+                        reject(results);
+                    }
+                });
+        });
+    };
+    Foscam.prototype.ptzStopCruise = function() {
+        var self = this;
+        return new Promise(function(resolve, reject) {
+            self
+                ._sendOrder({
+                    cmd: 'ptzStopCruise'
+                })
+                .then(function(results) {
+                    if (parseInt(results.result[0]) === 0) {
+                        resolve(results);
+                    } else {
+                        reject(results);
+                    }
+                });
+        });
+    };
     Foscam.prototype._sendOrder = function(params) {
         var self = this;
         return new Promise(function(resolve, reject) {
