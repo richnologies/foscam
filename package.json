@@ -21,6 +21,6 @@
     "xml2js": "^0.4.9"
   },
   "publishConfig": {
-    "registry": "http://npm.richnologies.me/"
+    "registry": "http://npm.innovategal.com/"
   }
 }
