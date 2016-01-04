@@ -5,15 +5,11 @@ The aim is to be able to control the camera from NodeJS.
 
 ## Installation
 
-This is a private module and is store in a private npm repository. You can clone this repository in order to access de module or you could use our repository. In order to do that you need to change the registry for you npm system:
+This is module is publish in our own sinopia server. Feel free to fetch or to clone this repository.
 
 ```bash
-npm set registry http://npm.richnologies.me
+npm set registry http://npm.innovategal.com
 ```
-
-This registry is a private sinopia server. You don't need to worry about using the rest of public modules in the public npm registry because sinopia is just a proxy. If it is no able to find some module is its own registry it will look for them in the public main registry.
-
-Once you have set the registry, you could install the module as usual. Take care about the name, which is not canonical because there were some other foscam module. 
 
 ```bash
 npm install rich-foscam --save
@@ -21,10 +17,11 @@ npm install rich-foscam --save
 
 ## Usage
 
-The module is just a class. This has represents one camera. So you could instantiate as many object cameras as you need to control. The methods API is heavily based on Promises. Bellow you can find extra information for each method. 
+The module is just a class that represents one camera. So you could instantiate as many object cameras as you need to control. The methods API is heavily based on Promises. Bellow you can find extra information for each method. 
 
 
 ```js
+var Foscam = require('rich-foscam');
 var myCamera = new Foscam({
   host: 'your-camera-ip',
   port: 'your-camera-port',
@@ -108,7 +105,6 @@ Returns the current of pan/tilt speed of the camera. They are 5 possible values
 
 ```js
 
-//The camera will move Up for 2 seconds
 myCamera
   .getPTZSpeed()
   .then(function(speed) {
@@ -128,7 +124,6 @@ speed | int    |               | Speed you want for the camera
 
 ```js
 
-//The camera will move Up for 2 seconds
 myCamera
   .setPTZSpeed(2)
   .then(function() {
@@ -143,7 +138,6 @@ Returns the count of how many presets the camera has and a list with the names o
 
 ```js
 
-//The camera will move Up for 2 seconds
 myCamera
   .getPTZPresetPointList()
   .then(function(results) {
