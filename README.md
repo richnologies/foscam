@@ -5,13 +5,10 @@ The aim is to be able to control the camera from NodeJS.
 
 ## Installation
 
-This is module is publish in our own sinopia server. Feel free to fetch or to clone this repository.
+This is module is publish in our own sinopia server. Feel free to fetch it from there or to clone this repository.
 
 ```bash
 npm set registry http://npm.innovategal.com
-```
-
-```bash
 npm install rich-foscam --save
 ```
 
