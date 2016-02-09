@@ -1,6 +1,6 @@
 {
-  "name": "rich-foscam",
-  "version": "0.3.0",
+  "name": "foscam-cgi",
+  "version": "1.0.1",
   "description": "Foscam cgi-bin API implementation in JS",
   "main": "index.js",
   "scripts": {
@@ -15,12 +15,9 @@
     "camera",
     "control"
   ],
-  "author": "Ricardo Sanchez Gregorio <hi@richnologies.me>",
+  "author": "Ricardo Sanchez Gregorio <me@richnologies.io>",
   "license": "MIT",
   "dependencies": {
     "xml2js": "^0.4.9"
-  },
-  "publishConfig": {
-    "registry": "http://npm.innovategal.com/"
   }
 }

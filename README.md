@@ -1,20 +1,17 @@
 # foscam cgi
 
 Implementation in Javascript of the Foscam IPCamera CGI Proxy API.
-The aim is to be able to control the camera from NodeJS. 
+The aim is to be able to control the camera from NodeJS.
 
 ## Installation
 
-This is module is publish in our own sinopia server. Feel free to fetch it from there or to clone this repository.
-
 ```bash
-npm set registry http://npm.innovategal.com
-npm install rich-foscam --save
+npm install foscam-cgi
 ```
 
 ## Usage
 
-The module is just a class that represents one camera. So you could instantiate as many object cameras as you need to control. The methods API is heavily based on Promises. Bellow you can find extra information for each method. 
+The module is just a class that represents one camera. So you could instantiate as many object cameras as you need to control. The methods API is heavily based on Promises. Bellow you can find extra information for each method.
 
 
 ```js
@@ -37,7 +34,7 @@ myCamera
 
 ### constructor ( properties )
 
-In order to connect to the camera you first need to provide its access details. This will create an object for that particular camera. You can create as much objects as you need, so you can control multiple cameras. 
+In order to connect to the camera you first need to provide its access details. This will create an object for that particular camera. You can create as much objects as you need, so you can control multiple cameras.
 
 name | type   | default       | description
 -----|--------|---------------|----------------------
@@ -112,7 +109,7 @@ myCamera
 
 ### setPTZSpeed ( speed )
 
-Update the speed of the camera. Valid values comes from 0 to 4, being 0 the slowest and 4 the fastest. 
+Update the speed of the camera. Valid values comes from 0 to 4, being 0 the slowest and 4 the fastest.
 
 name  | type   | default       | description
 ------|--------|---------------|----------------------
@@ -145,7 +142,7 @@ myCamera
 
 ### ptzAddPresetPoint ( name )
 
-Add a new preset point with the given name. The preset point is the current position of the camera, including its pan/tilt/zoom. 
+Add a new preset point with the given name. The preset point is the current position of the camera, including its pan/tilt/zoom.
 
 name  | type   | default       | description
 ------|--------|---------------|----------------------
