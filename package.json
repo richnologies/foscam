@@ -1,6 +1,6 @@
 {
   "name": "foscam-cgi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Foscam cgi-bin API implementation in JS",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://richnologies@bitbucket.org/innovategal/foscam.git"
+    "url": "git+https://github.com/richnologies/foscam.git"
   },
   "keywords": [
     "foscam",
