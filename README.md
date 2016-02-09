@@ -15,7 +15,7 @@ The module is just a class that represents one camera. So you could instantiate 
 
 
 ```js
-var Foscam = require('rich-foscam');
+var Foscam = require('foscam-cgi');
 var myCamera = new Foscam({
   host: 'your-camera-ip',
   port: 'your-camera-port',
