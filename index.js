@@ -75,6 +75,38 @@ var Foscam = (function() {
                 });
         });
     };
+    Foscam.prototype._zoom = function(cmd, time) {
+        var self = this;
+        return new Promise(function(resolve, reject) {
+            self
+                ._sendOrder({
+                    cmd: cmd
+                })
+                .then(function(results) {
+                    var result = parseInt(results.result[0]);
+                    if (result === 0) {
+                        if (time) {
+                            setTimeout(function() {
+                                self.zoomStop()
+                                    .then(function(result) {
+                                        resolve(result);
+                                    })
+                                    .catch(function(result) {
+                                        reject(result);
+                                    });
+                            }, time);
+                        } else {
+                            resolve(result);
+                        }
+                    } else {
+                        reject(result);
+                    }
+                })
+                .catch(function(result) {
+                    reject(result);
+                });
+        });
+    };
     Foscam.prototype.getPTZSpeed = function() {
         var self = this;
         return new Promise(function(resolve, reject) {
@@ -113,10 +145,10 @@ var Foscam = (function() {
         });
     };
     Foscam.prototype.zoomIn = function(time) {
-        return this._ptz('zoomIn', time);
+        return this._zoom('zoomIn', time);
     };
     Foscam.prototype.zoomOut = function(time) {
-        return this._ptz('zoomOut', time);
+        return this._zoom('zoomOut', time);
     };
     Foscam.prototype.zoomStop = function() {
         return this._sendOrder({
