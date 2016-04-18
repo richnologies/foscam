@@ -171,7 +171,7 @@ var Foscam = (function() {
                 });
         });
     };
-    Foscam.prototype.setPTZSpeed = function(speed) {
+    Foscam.prototype.setZoomSpeed = function(speed) {
         var self = this;
         return new Promise(function(resolve, reject) {
             if (speed > 2 || speed < 0) {
