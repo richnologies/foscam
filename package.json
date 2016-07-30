@@ -1,6 +1,6 @@
 {
   "name": "foscam-cgi",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Foscam cgi-bin API implementation in JS",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
   "author": "Ricardo Sanchez Gregorio <me@richnologies.io>",
   "license": "MIT",
   "dependencies": {
+    "bluebird": "3.4.1",
     "xml2js": "^0.4.9"
   },
   "devDependencies": {

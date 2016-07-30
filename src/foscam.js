@@ -1,5 +1,7 @@
 'use strict';
 
+const Promise = require('bluebird');
+
 const http = require('http');
 const querystring = require('querystring');
 const xml = require('xml2js');
