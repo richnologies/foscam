@@ -7,7 +7,7 @@ notifications:
   email: false
 node_js:
   - node
-  - iojs
-  - 6
-  - 5
-  - 4
+script:
+  - gulp test --coverage
+after_success:
+  - npm run report-coverage

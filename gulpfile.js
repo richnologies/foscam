@@ -26,7 +26,7 @@ gulp.task('test', done => {
 });
 
 gulp.task('pre-tests', () => {
-  return gulp.src('./src/**/*.js')
+  return gulp.src('./lib/**/*.js')
     .pipe($.istanbul({
       includeUntested: true
     }))

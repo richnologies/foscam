@@ -1,5 +1,11 @@
 # foscam cgi
 
+![travis build](https://img.shields.io/travis/richnologies/foscam.svg)
+![Codecov](https://img.shields.io/codecov/c/github/richnologies/foscam.svg)
+![version](https://img.shields.io/npm/v/foscam-cgi.svg)
+![downloas](https://img.shields.io/npm/dt/foscam-cgi.svg)
+![license](https://img.shields.io/npm/l/express.svg)
+
 Implementation in Javascript of the Foscam IPCamera CGI Proxy API.
 The aim is to be able to control the camera from NodeJS.
 
