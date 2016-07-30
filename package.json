@@ -1,6 +1,6 @@
 {
   "name": "foscam-cgi",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Foscam cgi-bin API implementation in JS",
   "main": "index.js",
   "scripts": {
