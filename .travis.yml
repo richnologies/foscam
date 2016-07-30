@@ -1,3 +1,13 @@
+sudo: false
 languaje: node_js
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
 node_js:
-  - "6"
+  - node
+  - iojs
+  - 6
+  - 5
+  - 4
