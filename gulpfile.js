@@ -4,24 +4,27 @@ var sequence = require('run-sequence');
 
 var $ = require('gulp-load-plugins')({lazy: true});
 
-gulp.task('build', function() {
-  return gulp.src('./src/**/*.js')
+gulp.task('build', ['build-test'], function() {
+  return gulp.src(['./src/**/*.js', '!./src/**/*.spec.js'])
     .pipe($.babel({
       presets: ['es2015']
     }))
     .pipe(gulp.dest('lib'));
 });
 
+gulp.task('build-test', function() {
+  return gulp.src('./src/**/*.spec.js')
+    .pipe($.babel({
+      presets: ['es2015']
+    }))
+    .pipe(gulp.dest('test'));
+});
+
 gulp.task('test', function(done) {
   if (args.coverage) {
-    sequence(
-      'pre-tests',
-      'run-tests',
-      done);
+    sequence('pre-tests', 'run-tests', done);
   } else {
-    sequence(
-      'run-tests',
-      done);
+    sequence('run-tests', done);
   }
 });
 
