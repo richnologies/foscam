@@ -1,10 +1,10 @@
-const gulp = require('gulp');
-const args = require('yargs').argv;
-const sequence = require('run-sequence');
+var gulp = require('gulp');
+var args = require('yargs').argv;
+var sequence = require('run-sequence');
 
-const $ = require('gulp-load-plugins')({lazy: true});
+var $ = require('gulp-load-plugins')({lazy: true});
 
-gulp.task('build', () => {
+gulp.task('build', function() {
   return gulp.src('./src/**/*.js')
     .pipe($.babel({
       presets: ['es2015']
@@ -12,7 +12,7 @@ gulp.task('build', () => {
     .pipe(gulp.dest('lib'));
 });
 
-gulp.task('test', done => {
+gulp.task('test', function(done) {
   if (args.coverage) {
     sequence(
       'pre-tests',
@@ -25,7 +25,7 @@ gulp.task('test', done => {
   }
 });
 
-gulp.task('pre-tests', () => {
+gulp.task('pre-tests', function() {
   return gulp.src('./lib/**/*.js')
     .pipe($.istanbul({
       includeUntested: true
@@ -33,8 +33,8 @@ gulp.task('pre-tests', () => {
     .pipe($.istanbul.hookRequire());
 });
 
-gulp.task('run-tests', () => {
-  let stream = gulp.src('./test/*.spec.js', {read: false})
+gulp.task('run-tests', function() {
+  var stream = gulp.src('./test/*.spec.js', {read: false})
     .pipe($.mocha());
   if (args.coverage) {
     stream.pipe($.istanbul.writeReports({
