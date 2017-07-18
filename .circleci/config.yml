@@ -27,3 +27,4 @@ jobs:
               npm --no-git-tag-version version $version
               echo -e "$NPM_USER\n$NPM_PASS\n$NPM_EMAIL" | npm login
               npm publish --access public
+            fi
