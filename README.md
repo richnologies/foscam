@@ -1,10 +1,10 @@
 # foscam cgi
 
-[![travis build](https://img.shields.io/travis/richnologies/foscam.svg)](https://travis-ci.org/richnologies/foscam)
+[![CircleCI](https://circleci.com/gh/richnologies/foscam.svg?style=svg)](https://circleci.com/gh/richnologies/foscam)
 [![Codecov](https://img.shields.io/codecov/c/github/richnologies/foscam.svg)](https://codecov.io/gh/richnologies/foscam)
-[![version](https://img.shields.io/npm/v/foscam-cgi.svg)](https://www.npmjs.com/package/foscam-cgi)
-[![downloas](https://img.shields.io/npm/dt/foscam-cgi.svg)](https://www.npmjs.com/package/foscam-cgi)
-[![license](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/foscam-cgi)
+[![version](https://img.shields.io/npm/v/@richnologies/forms.svg)](https://www.npmjs.com/package/@richnologies/foscam)
+[![downloas](https://img.shields.io/npm/v/@richnologies/forms.svg)](https://www.npmjs.com/package/@richnologies/foscam)
+[![license](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/@richnologies/foscam)
 
 Implementation in Javascript of the Foscam IPCamera CGI Proxy API.
 The aim is to be able to control the camera from NodeJS.
@@ -12,7 +12,7 @@ The aim is to be able to control the camera from NodeJS.
 ## Installation
 
 ```bash
-npm install foscam-cgi
+npm install @richnologies/foscam
 ```
 
 ## Usage
@@ -21,8 +21,8 @@ The module is just a class that represents one camera. So you could instantiate 
 
 
 ```js
-var Foscam = require('foscam-cgi');
-var myCamera = new Foscam({
+const Foscam = require('@richnologies/foscam');
+const myCamera = new Foscam({
   host: 'your-camera-ip',
   port: 'your-camera-port',
   usr: 'your-user',
@@ -52,7 +52,7 @@ pwd  | string | root          | Password
 
 ```js
 
-var myCamera = new Foscam({
+const myCamera = new Foscam({
   host: 'your-camera-ip',
   port: 80,
   usr: 'your-user',
