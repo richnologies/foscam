@@ -1,1 +1,1 @@
-module.exports = require('./lib/foscam');
+module.exports = require('./lib/foscam')
