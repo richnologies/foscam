@@ -2,8 +2,8 @@
 
 [![CircleCI](https://circleci.com/gh/richnologies/foscam.svg?style=svg)](https://circleci.com/gh/richnologies/foscam)
 [![Codecov](https://img.shields.io/codecov/c/github/richnologies/foscam.svg)](https://codecov.io/gh/richnologies/foscam)
-[![version](https://img.shields.io/npm/v/@richnologies/forms.svg)](https://www.npmjs.com/package/@richnologies/foscam)
-[![downloas](https://img.shields.io/npm/v/@richnologies/forms.svg)](https://www.npmjs.com/package/@richnologies/foscam)
+[![version](https://img.shields.io/npm/v/@richnologies/foscam.svg)](https://www.npmjs.com/package/@richnologies/foscam)
+[![downloas](https://img.shields.io/npm/v/@richnologies/foscam.svg)](https://www.npmjs.com/package/@richnologies/foscam)
 [![license](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/@richnologies/foscam)
 
 Implementation in Javascript of the Foscam IPCamera CGI Proxy API.
